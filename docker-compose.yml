@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  php:
+    image: php:8.2-apache
+    container_name: php-mini-course
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html
+    restart: unless-stopped
+    working_dir: /var/www/html

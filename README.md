@@ -33,7 +33,7 @@ Setiap pertemuan memiliki folder tersendiri dengan struktur:
 ## 🛠️ Prasyarat
 
 ### Software yang Diperlukan
-- **Web Server**: XAMPP, Laragon, MAMP, atau WAMP
+- **Web Server**: XAMPP, Laragon, MAMP, atau WAMP. Jika ingin docker jalankan `docker-compose up -d` --> [docker readme](DOCKER.md)
 - **Text Editor**: VS Code, Sublime Text, atau Notepad++
 - **Browser**: Chrome, Firefox, atau browser modern lainnya
 

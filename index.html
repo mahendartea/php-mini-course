@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Mini Course - Beranda</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.3em;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .docker-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        .docker-info h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .docker-info p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .course-card {
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            padding: 30px;
+            border-radius: 15px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-card h3 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            color: #4CAF50;
+        }
+
+        .course-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .course-number {
+            background: #4CAF50;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .quick-links {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .quick-links h2 {
+            margin-bottom: 25px;
+            font-size: 2em;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .link-btn {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+        }
+
+        .link-btn:hover {
+            background: #45a049;
+            transform: translateY(-3px);
+        }
+
+        .status-badge {
+            background: #4CAF50;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐳 PHP Mini Course</h1>
+            <p>Belajar PHP Dasar dalam 10 Pertemuan - Running with Docker</p>
+        </div>
+
+        <div class="docker-info">
+            <h2>🚀 Server Docker Berjalan!</h2>
+            <p>Course berhasil dijalankan menggunakan Docker di <strong>http://localhost:8080</strong></p>
+        </div>
+
+        <div class="course-grid">
+            <a href="pertemuan-01/" class="course-card">
+                <div class="course-number">1</div>
+                <h3>Pengenalan PHP & Instalasi</h3>
+                <p>Memulai perjalanan PHP dengan hello world dan setup environment</p>
+                <span class="status-badge">✅ Complete</span>
+            </a>
+
+            <a href="pertemuan-02/" class="course-card">
+                <div class="course-number">2</div>
+                <h3>Sintaks Dasar & Variabel</h3>
+                <p>Mempelajari variabel, tipe data, dan sintaks dasar PHP</p>
+                <span class="status-badge">✅ Complete</span>
+            </a>
+
+            <a href="pertemuan-03/" class="course-card">
+                <div class="course-number">3</div>
+                <h3>Operator dan Tipe Data</h3>
+                <p>Operator aritmatika, perbandingan, dan logika dengan kalkulator</p>
+                <span class="status-badge">✅ Complete</span>
+            </a>
+
+            <a href="pertemuan-04/" class="course-card">
+                <div class="course-number">4</div>
+                <h3>Percabangan (If/Else/Switch)</h3>
+                <p>Struktur kontrol percabangan dan pengambilan keputusan</p>
+                <span class="status-badge">✅ Complete</span>
+            </a>
+
+            <a href="pertemuan-05/" class="course-card">
+                <div class="course-number">5</div>
+                <h3>Perulangan (Looping)</h3>
+                <p>For, while, foreach dengan tabel perkalian interaktif</p>
+                <span class="status-badge">✅ Complete</span>
+            </a>
+
+            <a href="pertemuan-06/" class="course-card">
+                <div class="course-number">6</div>
+                <h3>Fungsi (Function)</h3>
+                <p>Membuat dan menggunakan fungsi untuk perhitungan geometri</p>
+                <span class="status-badge">✅ Complete</span>
+            </a>
+
+            <a href="pertemuan-07/" class="course-card">
+                <div class="course-number">7</div>
+                <h3>Array & Manipulasinya</h3>
+                <p>Array indexed, associative, dan multidimensional</p>
+                <span class="status-badge">✅ Complete</span>
+            </a>
+
+            <a href="pertemuan-08/" class="course-card">
+                <div class="course-number">8</div>
+                <h3>Form Input & Validasi</h3>
+                <p>Processing form dengan validasi client-side dan server-side</p>
+                <span class="status-badge">✅ Complete</span>
+            </a>
+
+            <a href="pertemuan-09/" class="course-card">
+                <div class="course-number">9</div>
+                <h3>File Handling & File Manager</h3>
+                <p>Operasi file dengan file manager lengkap dan logging</p>
+                <span class="status-badge">✅ Complete</span>
+            </a>
+
+            <a href="pertemuan-10/" class="course-card">
+                <div class="course-number">10</div>
+                <h3>Mini Proyek: Aplikasi Kontak</h3>
+                <p>Project akhir - aplikasi CRUD kontak dengan JSON storage</p>
+                <span class="status-badge">✅ Complete</span>
+            </a>
+        </div>
+
+        <div class="quick-links">
+            <h2>🔗 Quick Access</h2>
+            <div class="links-grid">
+                <a href="pertemuan-01/hello-world.php" class="link-btn">
+                    🚀 Start Learning - Hello World
+                </a>
+                <a href="pertemuan-10/" class="link-btn">
+                    🎯 Final Project - Contact App
+                </a>
+                <a href="DOCKER.md" class="link-btn">
+                    🐳 Docker Documentation
+                </a>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; opacity: 0.8;">
+            <p>🐳 Powered by Docker | 🐘 PHP 8.2 | 🌐 Apache Server</p>
+            <p style="margin-top: 10px;">Happy Coding! 🚀</p>
+        </div>
+    </div>
+</body>
+
+</html>

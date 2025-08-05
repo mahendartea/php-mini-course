@@ -216,9 +216,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 👨‍💻 Author
 
-**Mahendra Tea**
+**Mahendar Dwi Payana**
 - GitHub: [@mahendartea](https://github.com/mahendartea)
-- Email: your-email@example.com
+- Email: hendartea@gmail.com
 
 ## 🙏 Acknowledgments
 

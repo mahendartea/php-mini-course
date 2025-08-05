@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Nama</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-section {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .input-group {
+            margin: 15px 0;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .input-group input,
+        .input-group select,
+        .input-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus,
+        .input-group textarea:focus {
+            border-color: #667eea;
+            outline: none;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn {
+            background: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #45a049;
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .form-methods {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .method-demo {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .result-preview {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>📝 Form Input Nama - Demo GET & POST</h1>
+
+        <!-- Info tentang Form Methods -->
+        <div class="form-methods">
+            <h2>📚 Perbedaan GET vs POST</h2>
+
+            <div class="info-box">
+                <h4>GET Method:</h4>
+                <ul>
+                    <li>Data dikirim melalui URL (query string)</li>
+                    <li>Data terlihat di address bar</li>
+                    <li>Cocok untuk pencarian, filter, pagination</li>
+                    <li>Dapat di-bookmark</li>
+                    <li>Terbatas ukuran data (~2048 karakter)</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h4>POST Method:</h4>
+                <ul>
+                    <li>Data dikirim di request body</li>
+                    <li>Data tidak terlihat di URL</li>
+                    <li>Cocok untuk form registrasi, login, update data</li>
+                    <li>Tidak terbatas ukuran data</li>
+                    <li>Lebih aman untuk data sensitif</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Form dengan GET Method -->
+        <div class="form-section">
+            <h2>🔍 Form dengan GET Method</h2>
+            <p>Form ini akan mengirim data melalui URL. Cocok untuk pencarian atau filter data.</p>
+
+            <form method="GET" action="proses-nama.php">
+                <div class="input-group">
+                    <label for="nama_get">Nama Lengkap:</label>
+                    <input type="text" id="nama_get" name="nama" placeholder="Masukkan nama lengkap Anda" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="umur_get">Umur:</label>
+                    <input type="number" id="umur_get" name="umur" placeholder="Masukkan umur" min="1" max="120">
+                </div>
+
+                <div class="input-group">
+                    <label for="kota_get">Kota Asal:</label>
+                    <select id="kota_get" name="kota">
+                        <option value="">Pilih Kota</option>
+                        <option value="Jakarta">Jakarta</option>
+                        <option value="Bandung">Bandung</option>
+                        <option value="Surabaya">Surabaya</option>
+                        <option value="Medan">Medan</option>
+                        <option value="Yogyakarta">Yogyakarta</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Kirim dengan GET</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+            </form>
+
+            <div class="result-preview">
+                <strong>Preview URL yang akan terbentuk:</strong><br>
+                <code>proses-nama.php?nama=[nama]&umur=[umur]&kota=[kota]</code>
+            </div>
+        </div>
+
+        <!-- Form dengan POST Method -->
+        <div class="form-section">
+            <h2>📮 Form dengan POST Method</h2>
+            <p>Form ini akan mengirim data secara tersembunyi. Lebih aman untuk data pribadi.</p>
+
+            <form method="POST" action="proses-nama.php">
+                <div class="input-group">
+                    <label for="nama_post">Nama Lengkap:</label>
+                    <input type="text" id="nama_post" name="nama" placeholder="Masukkan nama lengkap Anda" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email_post">Email:</label>
+                    <input type="email" id="email_post" name="email" placeholder="contoh@email.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="telepon_post">Nomor Telepon:</label>
+                    <input type="tel" id="telepon_post" name="telepon" placeholder="08xxxxxxxxxx">
+                </div>
+
+                <div class="input-group">
+                    <label for="pesan_post">Pesan:</label>
+                    <textarea id="pesan_post" name="pesan" rows="4"
+                        placeholder="Tulis pesan Anda di sini..."></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="newsletter_post">
+                        <input type="checkbox" id="newsletter_post" name="newsletter" value="ya"
+                            style="width: auto; margin-right: 8px;">
+                        Saya ingin menerima newsletter
+                    </label>
+                </div>
+
+                <button type="submit" class="btn">Kirim dengan POST</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+            </form>
+
+            <div class="result-preview">
+                <strong>Keamanan POST:</strong><br>
+                Data tidak akan terlihat di URL, lebih aman untuk informasi pribadi seperti email dan pesan.
+            </div>
+        </div>
+
+        <!-- Form Comparison Demo -->
+        <div class="method-demo">
+            <h2>⚖️ Perbandingan Langsung</h2>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                    <h4 style="color: #2196F3;">GET Form (Simple Search)</h4>
+                    <form method="GET" action="proses-nama.php"
+                        style="border: 2px solid #2196F3; padding: 15px; border-radius: 8px;">
+                        <input type="text" name="search" placeholder="Cari sesuatu..."
+                            style="width: 100%; margin-bottom: 10px; padding: 8px;">
+                        <button type="submit" class="btn" style="background: #2196F3;">Search</button>
+                    </form>
+                    <small style="color: #666;">URL akan menampilkan: ?search=kata_kunci</small>
+                </div>
+
+                <div>
+                    <h4 style="color: #4CAF50;">POST Form (Login Simulation)</h4>
+                    <form method="POST" action="proses-nama.php"
+                        style="border: 2px solid #4CAF50; padding: 15px; border-radius: 8px;">
+                        <input type="text" name="username" placeholder="Username"
+                            style="width: 100%; margin-bottom: 8px; padding: 8px;">
+                        <input type="password" name="password" placeholder="Password"
+                            style="width: 100%; margin-bottom: 10px; padding: 8px;">
+                        <button type="submit" class="btn">Login</button>
+                    </form>
+                    <small style="color: #666;">Data login tidak akan terlihat di URL</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tips dan Best Practices -->
+        <div class="form-methods">
+            <h2>💡 Tips dan Best Practices</h2>
+
+            <div class="info-box">
+                <h4>Kapan Menggunakan GET:</h4>
+                <ul>
+                    <li>Form pencarian</li>
+                    <li>Filter dan sorting data</li>
+                    <li>Pagination</li>
+                    <li>Link yang perlu di-bookmark</li>
+                    <li>Ketika tidak ada data sensitif</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h4>Kapan Menggunakan POST:</h4>
+                <ul>
+                    <li>Form registrasi/pendaftaran</li>
+                    <li>Form login</li>
+                    <li>Upload file</li>
+                    <li>Data yang mengubah state server</li>
+                    <li>Data sensitif (password, informasi pribadi)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px; font-style: italic;">
+            <small>Form dibuat pada:
+                <?php echo date('d F Y, H:i:s'); ?>
+            </small>
+        </div>
+    </div>
+
+    <script>
+        // Preview URL untuk GET form
+        document.querySelector('form[method="GET"]').addEventListener('input', function () {
+            const formData = new FormData(this);
+            const params = new URLSearchParams();
+
+            for (let [key, value] of formData.entries()) {
+                if (value) params.append(key, value);
+            }
+
+            const preview = document.querySelector('.result-preview code');
+            preview.textContent = `proses-nama.php?${params.toString()}`;
+        });
+    </script>
+</body>
+
+</html>
